@@ -67,6 +67,9 @@ const TabsIOS = () => {
         tabBarLabelStyle: {
           fontSize: 11,
         },
+        tabBarIconStyle: {
+          fontSize: 20,
+        },
         tabBarStyle: {
           borderTopWidth: 0,
           elevation: 0,

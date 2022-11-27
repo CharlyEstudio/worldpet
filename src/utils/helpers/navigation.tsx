@@ -1,48 +1,50 @@
 import React from 'react';
 import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // ENUMS
 import { NavigationEnum } from "../enums/navigation.enum";
+import { IconsEnum } from '../enums/icons.enum';
 
-export const getIcon = (name: string, color: string, size: number = 10) => {
+export const getIcon = (name: string, color: string, size: number = 20) => {
   let iconName: string;
 
   switch(name) {
     case NavigationEnum.NAVIGATION_PLACES:
-      iconName = 'T1';
+      iconName = IconsEnum.NAVIGATION_PLACES;
       break;
     case NavigationEnum.NAVIGATION_FAVORITES:
-      iconName = 'T2';
+      iconName = IconsEnum.NAVIGATION_FAVORITES;
       break;
     case NavigationEnum.NAVIGATION_RANKIN:
-      iconName = 'T3';
+      iconName = IconsEnum.NAVIGATION_RANKIN;
       break;
     case NavigationEnum.PROFILE:
-      iconName = 'T4';
+      iconName = IconsEnum.PROFILE;
       break;
     default:
-      iconName = 'T1';
+      iconName = IconsEnum.NAVIGATION_PLACES;
   }
 
-  return <Text style={{color: color}}>{iconName}</Text>;
+  return <Icon name={iconName} size={size} color={color} />;
 };
 
-export const getIconTopTap = (name: string, color: string, size: number = 10) => {
+export const getIconTopTap = (name: string, color: string, size: number = 20) => {
   let iconName: string;
 
   switch(name) {
     case NavigationEnum.PLACE:
-      iconName = 'In';
+      iconName = IconsEnum.PLACE;
       break;
     case NavigationEnum.PICTURES:
-      iconName = 'Ft';
+      iconName = IconsEnum.PICTURES;
       break;
     case NavigationEnum.COMMENTS:
-      iconName = 'Co';
+      iconName = IconsEnum.COMMENTS;
       break;
     default:
-      iconName = 'In';
+      iconName = IconsEnum.PLACE;
   }
 
-  return <Text style={{color: color}}>{iconName}</Text>;
+  return <Icon name={iconName} size={size} color={color} />;
 };
