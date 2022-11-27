@@ -14,7 +14,7 @@ const Places = ({navigation}: NavigationProps) => {
       <Text style={styles.title}>Places</Text>
       <Button
         title='Lugar'
-        onPress={() => navigation.navigate(NavigationEnum.PLACE, {id: 1, place: 'Milenio III'})}
+        onPress={() => navigation.navigate(NavigationEnum.TOP_TAP_NAVIGATOR_PLACE, {id: 1, place: 'Milenio III'})}
       />
     </View>
   );

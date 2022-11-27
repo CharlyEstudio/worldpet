@@ -16,7 +16,7 @@ const Favorites = ({navigation}: NavigationProps) => {
       <Text style={styles.title}>Favorites</Text>
       <Button
         title='Ir a Lugar'
-        onPress={() => navigation.navigate(NavigationEnum.PLACE, {id: 2, place: 'Candiles'})}
+        onPress={() => navigation.navigate(NavigationEnum.TOP_TAP_NAVIGATOR_PLACE, {id: 2, place: 'Candiles'})}
       />
     </View>
   );

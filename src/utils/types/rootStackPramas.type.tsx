@@ -7,6 +7,7 @@ import { PlaceParams } from '../interfaces/placeParams.interface';
 export type RootStackParams = {
     [NavigationEnum.PLACES]: undefined,
     [NavigationEnum.PLACE]: PlaceParams,
+    [NavigationEnum.TOP_TAP_NAVIGATOR_PLACE]: PlaceParams,
     [NavigationEnum.FAVORITES]: undefined,
     [NavigationEnum.RANKIN]: undefined,
     [NavigationEnum.PROFILE]: undefined,

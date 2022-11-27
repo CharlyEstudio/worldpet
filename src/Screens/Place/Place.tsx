@@ -18,6 +18,7 @@ const Place = ({navigation, route}: CustomNavigationProps) => {
   
   return (
     <View style={styles.globalMargin}>
+      <Text>Hola</Text>
       <Text style={styles.title}>{params.place}</Text>
       <Button
         title='Regresar'

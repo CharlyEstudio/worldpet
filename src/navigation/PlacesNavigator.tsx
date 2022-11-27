@@ -1,7 +1,8 @@
 import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Navigation
-import { createStackNavigator } from '@react-navigation/stack';
+import { TopTabNavigatorPlace } from './TopTapNavigationPlace';
 
 // ENUMS
 import { NavigationEnum } from '../utils/enums/navigation.enum';
@@ -13,14 +14,13 @@ import { RootStackParams } from '../utils/types/rootStackPramas.type';
 
 // Screens
 import Places from '../Screens/Places/Places';
-import Place from '../Screens/Place/Place';
 
 const Stack = createStackNavigator<RootStackParams>();
 
 export const PlacesNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={NavigationEnum.PLACES}
+      initialRouteName={NavigationEnum.PLACE}
       screenOptions={{
         headerShown: false,
         cardStyle: {
@@ -29,7 +29,7 @@ export const PlacesNavigator = () => {
       }}
     >
       <Stack.Screen name={NavigationEnum.PLACES} options={{title: TitlesScreens.PLACES}} component={Places} />
-      <Stack.Screen name={NavigationEnum.PLACE} options={{title: TitlesScreens.PLACE}} component={Place} />
+      <Stack.Screen name={NavigationEnum.TOP_TAP_NAVIGATOR_PLACE} options={{title: TitlesScreens.PLACE}} component={TopTabNavigatorPlace} />
     </Stack.Navigator>
   )
 };

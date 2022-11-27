@@ -16,7 +16,7 @@ const Rankin = ({navigation}: NavigationProps) => {
       <Text style={styles.title}>Rankin</Text>
       <Button
         title='Ir a Lugar'
-        onPress={() => navigation.navigate(NavigationEnum.PLACE, {id: 3, place: 'Paseos del Bosque'})}
+        onPress={() => navigation.navigate(NavigationEnum.TOP_TAP_NAVIGATOR_PLACE, {id: 3, place: 'Paseos del Bosque'})}
       />
     </View>
   );

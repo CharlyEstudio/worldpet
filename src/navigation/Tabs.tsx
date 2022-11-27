@@ -1,7 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Text, Platform } from 'react-native';
+import { Platform } from 'react-native';
+
+// Utils
+import { getIcon } from '../utils/helpers/navigation';
 
 // ENUMS
 import { NavigationEnum } from '../utils/enums/navigation.enum';
@@ -17,8 +20,6 @@ import { RankinNavigator } from './RankinNavigator';
 import Profile from '../Screens/Profile/Profile';
 
 export const Tabs = () => {
-  console.log(Platform.OS);
-  
   return Platform.OS === 'ios'
     ? <TabsIOS />
     : <TabsAndroid />
@@ -29,10 +30,13 @@ const BottomTabAndroid = createMaterialBottomTabNavigator();
 const TabsAndroid = () => {
   return (
     <BottomTabAndroid.Navigator
+      initialRouteName={NavigationEnum.NAVIGATION_PLACES}
       sceneAnimationEnabled={true}
       barStyle={{
         backgroundColor: ColorsEnum.GRAY_LIGTH,
       }}
+      activeColor={ColorsEnum.PRIMARY}
+      inactiveColor={ColorsEnum.PRIMARY_INACTIVE}
       screenOptions={({route}) => ({
         tabBarIcon: ({color}) => {
           return getIcon(route.name, color);
@@ -79,27 +83,4 @@ const TabsIOS = () => {
       <BottomTabIOS.Screen name={NavigationEnum.PROFILE} options={{ title: TitlesScreens.PROFILE }} component={Profile} />
     </BottomTabIOS.Navigator>
   );
-};
-
-const getIcon = (name: string, color: string, size: number = 10) => {
-  let iconName: string;
-
-  switch(name) {
-    case NavigationEnum.NAVIGATION_PLACES:
-      iconName = 'T1';
-      break;
-    case NavigationEnum.NAVIGATION_FAVORITES:
-      iconName = 'T2';
-      break;
-    case NavigationEnum.NAVIGATION_RANKIN:
-      iconName = 'T3';
-      break;
-    case NavigationEnum.PROFILE:
-      iconName = 'T4';
-      break;
-    default:
-      iconName = 'T1';
-  }
-
-  return <Text style={{color: color}}>{iconName}</Text>;
 };
