@@ -12,6 +12,10 @@ const Search = () => {
   const [text, onChangeText] = useState("");
   const [number, onChangeNumber] = useState(null);
 
+  const handler = () => {
+    console.log(text);
+  };
+
   return (
     <View style={styles.search}>
       <View style={[styles.card, styles.shadowProp, styles.elevation]}>
@@ -19,6 +23,7 @@ const Search = () => {
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
+          onBlur={handler}
           value={text}
           placeholder='Buscar'
         />
@@ -56,6 +61,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginLeft: 5,
+    width: '100%'
   },
 });
 
