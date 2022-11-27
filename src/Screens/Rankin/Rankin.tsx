@@ -1,10 +1,23 @@
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import React from 'react';
 
-const Rankin = () => {
+// Styles
+import { styles } from '../../themes/appTheme';
+
+// ENUMS
+import { NavigationEnum } from '../../utils/enums/navigation.enum';
+
+// Models
+import { NavigationProps } from '../../utils/interfaces/navigationProps.interface';
+
+const Rankin = ({navigation}: NavigationProps) => {
   return (
-    <View>
-      <Text>Rankin</Text>
+    <View style={styles.globalMargin}>
+      <Text style={styles.title}>Rankin</Text>
+      <Button
+        title='Ir a Lugar'
+        onPress={() => navigation.navigate(NavigationEnum.PLACE, {id: 3, place: 'Paseos del Bosque'})}
+      />
     </View>
   );
 };

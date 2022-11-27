@@ -15,12 +15,8 @@ const Favorites = ({navigation}: NavigationProps) => {
     <View style={styles.globalMargin}>
       <Text style={styles.title}>Favorites</Text>
       <Button
-        title='Ir a Places'
-        onPress={() => navigation.navigate(NavigationEnum.PLACES)}
-      />
-      <Button
-        title='Regresar'
-        onPress={() => navigation.pop()}
+        title='Ir a Lugar'
+        onPress={() => navigation.navigate(NavigationEnum.PLACE, {id: 2, place: 'Candiles'})}
       />
     </View>
   );

@@ -14,7 +14,7 @@ import { NavigationEnum } from '../../utils/enums/navigation.enum';
 export interface CustomNavigationProps extends StackScreenProps<RootStackParams, NavigationEnum.PLACE>{};
 
 const Place = ({navigation, route}: CustomNavigationProps) => {
-  const params = route.params;  
+  const params = route.params;
   
   return (
     <View style={styles.globalMargin}>

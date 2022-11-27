@@ -12,18 +12,15 @@ import { TitlesScreens } from '../utils/enums/titlesScreen.enum';
 import { RootStackParams } from '../utils/types/rootStackPramas.type';
 
 // Screens
-import Places from '../Screens/Places/Places';
-import Place from '../Screens/Place/Place';
-import Favorites from '../Screens/Favorites/Favorites';
 import Rankin from '../Screens/Rankin/Rankin';
-import Profile from '../Screens/Profile/Profile';
+import Place from '../Screens/Place/Place';
 
 const Stack = createStackNavigator<RootStackParams>();
 
-export const StackNavigator = () => {
+export const RankinNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={NavigationEnum.PLACES}
+      initialRouteName={NavigationEnum.RANKIN}
       screenOptions={{
         headerShown: false,
         cardStyle: {
@@ -31,11 +28,8 @@ export const StackNavigator = () => {
         }
       }}
     >
-      <Stack.Screen name={NavigationEnum.PLACES} options={{title: TitlesScreens.PLACES}} component={Places} />
-      <Stack.Screen name={NavigationEnum.PLACE} options={{title: TitlesScreens.PLACE}} component={Place} />
-      <Stack.Screen name={NavigationEnum.FAVORITES} options={{title: TitlesScreens.FAVORITES}} component={Favorites} />
       <Stack.Screen name={NavigationEnum.RANKIN} options={{title: TitlesScreens.RANKIN}} component={Rankin} />
-      <Stack.Screen name={NavigationEnum.PROFILE} options={{title: TitlesScreens.PROFILE}} component={Profile} />
+      <Stack.Screen name={NavigationEnum.PLACE} options={{title: TitlesScreens.PLACE}} component={Place} />
     </Stack.Navigator>
   )
 };
