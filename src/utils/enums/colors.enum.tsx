@@ -7,4 +7,5 @@ export enum ColorsEnum {
     GRAY_LIGTH_IOS = '#171717',
     GRAY_LIGTH_ANDROID = '#52006A',
     DARK = 'black',
+    BLUE = '#449dff',
 }

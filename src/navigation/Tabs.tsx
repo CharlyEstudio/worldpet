@@ -43,7 +43,7 @@ const TabsAndroid = () => {
         }
       })}
     >
-      <BottomTabAndroid.Screen name={NavigationEnum.NAVIGATION_PLACES} options={{ title: TitlesScreens.PLACES }} component={PlacesNavigator} />
+      <BottomTabAndroid.Screen name={NavigationEnum.NAVIGATION_PLACES} options={{ title: TitlesScreens.PLACES,  }} component={PlacesNavigator} />
       <BottomTabAndroid.Screen name={NavigationEnum.NAVIGATION_FAVORITES} options={{ title: TitlesScreens.FAVORITES }} component={FavoritesNavigator} />
       <BottomTabAndroid.Screen name={NavigationEnum.NAVIGATION_RANKIN} options={{ title: TitlesScreens.RANKIN }} component={RankinNavigator} />
       <BottomTabAndroid.Screen name={NavigationEnum.PROFILE} options={{ title: TitlesScreens.PROFILE }} component={Profile} />

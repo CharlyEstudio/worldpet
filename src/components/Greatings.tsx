@@ -9,7 +9,7 @@ const Greatings = () => {
     <View style={styles.greatings}>
       <View style={styles.card}>
         <Text style={styles.date}>{date.toDateString()}</Text>
-        <Text style={styles.messageDog}>Gua gua gua?!</Text>
+        <Text style={styles.messageDog}>Guau guau guau?!</Text>
         <Text style={styles.messageTraductor}>(A donde vamos hoy?!)</Text>
       </View>
     </View>
@@ -30,17 +30,17 @@ const styles = StyleSheet.create({
     backgroundColor: ColorsEnum.GRAY_LIGTH_OPACITY,
   },
   date: {
-    fontSize: 15,
+    fontSize: 13,
     color: ColorsEnum.DARK,
     fontWeight: 'bold',
   },
   messageDog: {
-    fontSize: 40,
+    fontSize: 30,
     color: ColorsEnum.DARK,
     fontWeight: 'bold',
   },
   messageTraductor: {
-    fontSize: 20,
+    fontSize: 15,
     color: ColorsEnum.DARK,
   },
 });

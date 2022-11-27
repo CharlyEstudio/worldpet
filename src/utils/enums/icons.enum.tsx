@@ -7,4 +7,5 @@ export enum IconsEnum {
   PICTURES = 'images-outline',
   COMMENTS = 'chatbubbles-outline',
   SEARCH = 'search-outline',
+  LOCK = 'lock-closed',
 }
