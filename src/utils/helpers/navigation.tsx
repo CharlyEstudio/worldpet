@@ -48,3 +48,7 @@ export const getIconTopTap = (name: string, color: string, size: number = 20) =>
 
   return <Icon name={iconName} size={size} color={color} />;
 };
+
+export const getIconCustom = (icon: string, color: string, size: number = 20) => {
+  return <Icon name={icon} size={size} color={color} />;
+};

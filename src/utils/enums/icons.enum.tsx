@@ -6,4 +6,5 @@ export enum IconsEnum {
   PLACE = 'navigate-outline',
   PICTURES = 'images-outline',
   COMMENTS = 'chatbubbles-outline',
+  SEARCH = 'search-outline',
 }

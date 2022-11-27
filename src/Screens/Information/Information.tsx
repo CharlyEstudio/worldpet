@@ -5,12 +5,12 @@ import React from 'react';
 import { NavigationProps } from '../../utils/interfaces/navigationProps.interface';
 
 // Styles
-import { styles } from '../../themes/appTheme';
+import { stylesGlobal } from '../../themes/appTheme';
 
 const Information = ({navigation, route}: NavigationProps) => {
   return (
-    <View style={styles.globalMargin}>
-      <Text style={styles.title}>Place</Text>
+    <View style={stylesGlobal.globalMargin}>
+      <Text style={stylesGlobal.title}>Place</Text>
       <Button
         title='Regresar'
         onPress={() => navigation.pop()}

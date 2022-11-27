@@ -3,7 +3,7 @@ import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 
 // Styles
-import { styles } from '../../themes/appTheme';
+import { stylesGlobal } from '../../themes/appTheme';
 
 // Types
 import { RootStackParams } from '../../utils/types/rootStackPramas.type';
@@ -17,9 +17,9 @@ const Place = ({navigation, route}: CustomNavigationProps) => {
   const params = route.params;
   
   return (
-    <View style={styles.globalMargin}>
+    <View style={stylesGlobal.globalMargin}>
       <Text>Hola</Text>
-      <Text style={styles.title}>{params.place}</Text>
+      <Text style={stylesGlobal.title}>{params.place}</Text>
       <Button
         title='Regresar'
         onPress={() => navigation.pop()}
